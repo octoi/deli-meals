@@ -5,15 +5,16 @@ import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {
   final String title;
+  final String id;
   final Color color;
 
-  const CategoryItem(this.title, this.color);
+  const CategoryItem(this.id, this.title, this.color);
 
   @override
   Widget build(BuildContext context) {
     void selectCategory() {
       Navigator.push(context, MaterialPageRoute(builder: (_) {
-        return CategoryMealsScreen();
+        return CategoryMealsScreen(id, title);
       }));
     }
 
