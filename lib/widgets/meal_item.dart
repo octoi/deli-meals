@@ -1,4 +1,5 @@
 import 'package:deli_meals/models/meal.dart';
+import 'package:deli_meals/screens/meal_detail_screen.dart';
 import 'package:flutter/material.dart';
 
 class MealItem extends StatelessWidget {
@@ -34,7 +35,13 @@ class MealItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    void selectMeal() {}
+    void selectMeal() {
+      Navigator.pushNamed(
+        context,
+        MealDetailScreen.routeName,
+        arguments: meal.id,
+      );
+    }
 
     return InkWell(
       onTap: selectMeal,
