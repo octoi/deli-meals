@@ -1,3 +1,4 @@
+import 'package:deli_meals/widgets/main_drawer.dart';
 import 'package:flutter/material.dart';
 
 class FiltersScreen extends StatelessWidget {
@@ -5,6 +6,9 @@ class FiltersScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(),
+      drawer: MainDrawer(),
+    );
   }
 }

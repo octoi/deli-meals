@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 
 class MealItem extends StatelessWidget {
   final Meal meal;
+  final Function removeItem;
 
-  const MealItem(this.meal);
+  const MealItem({required this.meal, required this.removeItem});
 
   String get complexityText {
     switch (meal.complexity) {
@@ -40,7 +41,11 @@ class MealItem extends StatelessWidget {
         context,
         MealDetailScreen.routeName,
         arguments: meal.id,
-      );
+      ).then((result) {
+        if (result != null) {
+          removeItem(result);
+        }
+      });
     }
 
     return InkWell(
