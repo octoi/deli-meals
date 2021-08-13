@@ -1,4 +1,4 @@
-import 'package:deli_meals/category_meals_screen.dart';
+import 'package:deli_meals/screens/category_meals_screen.dart';
 import 'package:deli_meals/models/category.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
