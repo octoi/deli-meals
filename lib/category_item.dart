@@ -13,9 +13,10 @@ class CategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void selectCategory() {
-      Navigator.push(context, MaterialPageRoute(builder: (_) {
-        return CategoryMealsScreen(id, title);
-      }));
+      Navigator.pushNamed(context, '/category-meals', arguments: {
+        'id': id,
+        'title': title,
+      });
     }
 
     return InkWell(
